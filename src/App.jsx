@@ -1,13 +1,15 @@
 import timelineItems from "./timelineItems";
 import assignLanes from "./assignLanes";
 import { Timeline } from "./components/Timeline";
+import dayjs from "dayjs";
 
 export function App() {
   const lanes = assignLanes(timelineItems);
-  console.log(lanes);
 
-  const start = timelineItems[0].start;
-  const end = timelineItems[timelineItems.length - 1].end;
+  const start = dayjs(timelineItems[0].start).format("MM/DD/YYYY");
+  const end = dayjs(timelineItems[timelineItems.length - 1].end).format(
+    "MM/DD/YYYY"
+  );
 
   return (
     <>

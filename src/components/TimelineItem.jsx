@@ -34,6 +34,9 @@ export function TimelineItem({ item }) {
   }
   const width = getItemWidth();
 
+  const formatted_start = dayjs(start).format("MM/DD/YYYY");
+  const formatted_end = dayjs(end).format("MM/DD/YYYY");
+
   return (
     <div
       className={clsx(
@@ -43,8 +46,8 @@ export function TimelineItem({ item }) {
     >
       <span>{name}</span>
       <div className="hidden group-hover:flex flex-col text-xs gap-2">
-        <p>Start: {start}</p>
-        <p>End: {end}</p>
+        <p>Start: {formatted_start}</p>
+        <p>End: {formatted_end}</p>
       </div>
     </div>
   );
