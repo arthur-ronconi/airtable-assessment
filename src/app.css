@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+button {
+  @apply cursor-pointer hover:brightness-110 active:brightness-75 transition;
+}
